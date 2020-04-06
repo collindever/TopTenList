@@ -5,17 +5,14 @@
 
 using std::string;
 
-TopTenList::TopTenList()
-{
-
+TopTenList::TopTenList() {
+    _list.resize(10);    
 }
 
-void TopTenList::set_at(int index, Hyperlink link)
-{
-
+void TopTenList::set_at(int index, Hyperlink link) {
+    _list[index - 1] = link;
 }
 
-Hyperlink TopTenList::get(int index)
-{
-
+Hyperlink TopTenList::get(int index) {
+    return _list.at(index - 1);
 }
